@@ -20,6 +20,6 @@ FastaFileName=`basename $FastaFile`
 OutputDir=`dirname $OutputFile`
 OutputFileName=`basename $OutputFile`
 
-DOCKER_CMD="docker run -v $FastaFile:/$FastaFileName -v $OutputDir:/output kxk302/pqsfinder:1.0.0 /$FastaFileName /output/$OutFileName $MinScore $Overlapping"
+DOCKER_CMD="docker run -v $FastaFile:/$FastaFileName -v $OutputDir:/output kxk302/pqsfinder:1.0.0 /$FastaFileName /output/$OutputFileName $MinScore $Overlapping"
 echo $DOCKER_CMD
 $DOCKER_CMD
