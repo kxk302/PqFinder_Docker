@@ -53,14 +53,14 @@ Suppose the output file for pqsfinder is at '/Users/kxk302/workspace/PqsFinder_D
 The output file name is 'pqsf_out.fasta', the output file folder is '/Users/kxk302/workspace/PqsFinder_Docker/output/Homo_sapiens/',
 and absolute path to output file name is '/Users/kxk302/workspace/PqsFinder_Docker/output/Homo_sapiens/pqsf_out_chr22.fasta'.
 
-Besides the fasta and output files, pqsfinder accepts minimum score and a True/False flag indicating whether overalpping G4s should be reported or not.
+Besides the fasta and output files, pqsfinder accepts minimum score and a 1/0 (True/False) flag indicating whether overalpping G4s should be reported or not.
 
 On Unix/Mac OS, to run the containerized version of pqsfinder, run the following command:
 > ./scripts/run_pqsfinder.sh FastaFileAbsolutPath OutputFileAbsolutePath MinScore Overlapping
 
 For example:
 
-> ./scripts/run_pqsfinder.sh /Users/kxk302/workspace/PqFinder_Docker/genomes/Homo_sapiens/chr22.fa /Users/kxk302/workspace/PqsFinder_Docker/output/Homo_sapiens/pqsf_out_chr22.fasta 30 TRUE
+> ./scripts/run_pqsfinder.sh /Users/kxk302/workspace/PqFinder_Docker/genomes/Homo_sapiens/chr22.fa /Users/kxk302/workspace/PqsFinder_Docker/output/Homo_sapiens/pqsf_out_chr22.fasta 30 1
 
 On Windows, to run the containerized version of pqsfinder, run the following command:
 
@@ -68,7 +68,7 @@ On Windows, to run the containerized version of pqsfinder, run the following com
 
 Below is an actual invocation of Dockerzed pqsfinder:
 
-> docker run -v /Users/kxk302/workspace/PqFinder_Docker/genomes/Homo_sapiens/chr22.fa:/chr22.fa -v /Users/kxk302/workspace/PqsFinder_Docker/output/Homo_sapiens:/output kxk302/pqsfinder:1.0.0 /chr22.fa /output/pqsf_out_chr22.fasta 30 TRUE
+> docker run -v /Users/kxk302/workspace/PqFinder_Docker/genomes/Homo_sapiens/chr22.fa:/chr22.fa -v /Users/kxk302/workspace/PqsFinder_Docker/output/Homo_sapiens:/output kxk302/pqsfinder:1.0.0 /chr22.fa /output/pqsf_out_chr22.fasta 30 1
 
 The -v flag simply mounts a folder on your host machine to the container, to make your local files accessible to the container.
 
