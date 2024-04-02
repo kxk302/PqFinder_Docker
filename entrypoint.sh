@@ -17,5 +17,5 @@ echo "MinScore: <$MinScore>"
 echo "Overlapping: <$Overlapping>"
 
 cd ./scripts
-Rscript run_pqs_finder.R $FastaFile $OutputFile $MinScore $Overlapping
+Rscript run_pqsfinder.R $FastaFile $OutputFile $MinScore $Overlapping
 
