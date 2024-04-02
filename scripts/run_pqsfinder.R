@@ -32,10 +32,6 @@ print("Running pqsfinder")
 # Run pqsfinder
 pqs <- pqsfinder(dnaString, min_score=MinScore, overlapping=(Overlapping == 1))
 
-# Sort the results by score to see the best one
-print("Sorting pqsfinder output by score")
-pqs_s <- pqs[order(score(pqs), decreasing = TRUE)]
-
 # Export all PQS into a GFF3-formatted file
 print("Exporting pqsfinder output")
-export(as(pqs, "GRanges"), OutputFile, version = "3")
+writeXStringSet(as(pqs, "DNAStringSet"), file = OutputFile, format = "fasta")
