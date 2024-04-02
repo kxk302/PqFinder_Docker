@@ -37,6 +37,7 @@ RUN Rscript -e "install.packages('BiocManager');"
 RUN Rscript -e "install.packages('seqinr');"
 RUN Rscript -e "BiocManager::install('pqsfinder');"
 RUN Rscript -e "BiocManager::install('rtracklayer');"
+RUN Rscript -e "BiocManager::install('Biostrings');"
 
 COPY ./entrypoint.sh /
 ENTRYPOINT ["/entrypoint.sh"]

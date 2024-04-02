@@ -2,7 +2,7 @@
 
 if [ $# -ne 4 ]; then
     echo "Incorrect number of parameters"
-    echo "Specify the fasta file, output file, minimum score, and overlapping flag"
+    echo "Specify the fasta file, output file, minimum score, and overlapping flag  (1 or 0, for True or False)"
     exit
 fi
 
