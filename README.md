@@ -55,18 +55,18 @@ and absolute path to output file name is '/Users/kxk302/workspace/PqsFinder_Dock
 
 Besides the fasta and output files, pqsfinder accepts minimum score and a True/False flag indicating whether overalpping G4s should be reported or not.
 
-On Unix/Mac OS, to run the containerized version of G4Hunter, run the following command:
+On Unix/Mac OS, to run the containerized version of pqsfinder, run the following command:
 > ./scripts/run_pqsfinder.sh FastaFileAbsolutPath OutputFileAbsolutePath MinScore Overlapping
 
 For example:
 
 > ./scripts/run_pqsfinder.sh /Users/kxk302/workspace/PqFinder_Docker/genomes/Homo_sapiens/chr22.fa /Users/kxk302/workspace/PqsFinder_Docker/output/Homo_sapiens/pqsf_out_chr22.fasta 30 TRUE
 
-On Windows, to run the containerized version of G4Hunter, run the following command:
+On Windows, to run the containerized version of pqsfinder, run the following command:
 
 > docker run -v $FastaFile:/$FastaFileName -v $OutputDir:/output kxk302/pqsfinder:1.0.0 /$FastaFileName /output/$OutFileName $MinScore $Overlapping
 
-Below is an actual invocation of Dockerzed G4Hunter:
+Below is an actual invocation of Dockerzed pqsfinder:
 
 > docker run -v /Users/kxk302/workspace/PqFinder_Docker/genomes/Homo_sapiens/chr22.fa:/chr22.fa -v /Users/kxk302/workspace/PqsFinder_Docker/output/Homo_sapiens:/output kxk302/pqsfinder:1.0.0 /chr22.fa /output/pqsf_out_chr22.fasta 30 TRUE
 
